@@ -1,0 +1,1302 @@
+@font-face {
+    font-family: "Resident Evil 7(RUS BY LYAJKA)";
+    src: url("../fonts/Resident Evil.otf");
+    font-weight: 400;
+    font-style: regular;
+}
+@font-face {
+    font-family: "ProximaNova";
+    src: url("../fonts/ProximaNova-Light.eot");
+    src: url("../fonts/ProximaNova-Light.eot?iefix") format("eot");
+    src: url("../fonts/ProximaNova-Light.woff") format("woff");
+    src: url("../fonts/ProximaNova-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: light;
+}
+@font-face {
+    font-family: "ProximaNova";
+    src: url("../fonts/ProximaNova-Regular.eot");
+    src: url("../fonts/ProximaNova-Regular.eot?iefix") format("eot");
+    src: url("../fonts/ProximaNova-Regular.woff") format("woff");
+    src: url("../fonts/ProximaNova-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: regular;
+}
+
+p {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+button {
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+body {
+    font-family: 'ProximaNova', Arial, open-sans;
+    font-size: 32px;
+    color: #fff;
+    margin: 0;
+}
+
+.page {
+    background: #000;
+    user-select: none;
+    overflow: hidden;
+}
+
+.title {
+    font-family: 'Resident Evil 7(RUS BY LYAJKA)', Arial, open-sans;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+}
+
+.title span {
+    color: #CE0000;
+}
+
+.title--small {
+    font-size: 67px;
+    line-height: 81px;
+}
+
+.title--middle {
+    font-size: 70px;
+    line-height: 84px;
+    letter-spacing: 1.3px;
+}
+
+.title--big {
+    font-size: 101px;
+    line-height: 121px;
+    letter-spacing: 2.2px;
+}
+
+.title--red {
+    color: #F32A2A;
+}
+
+.title--blue {
+    color: #1212EB;
+}
+
+.list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.header {
+    padding: 70px 85px 580px;
+    background-size: inherit;
+    background: url('../img/header-people.png') no-repeat 88% 158px, url('../img/header-people-dust.png') no-repeat 105% 95%, url('../img/header-smoke.png') no-repeat 102% 97%, url('../img/header-dust.png') no-repeat -185px -136px;
+}
+
+.owner {
+    display: block;
+    width: 519px;
+    margin-bottom: 325px;
+    user-select: text;
+}
+
+.header__title {
+    width: 860px;
+    margin-left: 100px;
+    margin-bottom: 80px;
+}
+
+.header__label {
+    display: block;
+    width: 630px;
+    margin-left: 95px;
+    margin-bottom: 100px;
+}
+
+.header__btn {
+    margin-left: 95px;
+}
+
+.btn {
+    display: block;
+    font-family: 'Resident Evil 7(RUS BY LYAJKA)', Arial, open-sans;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.btn__inner {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    z-index: 2;
+}
+
+.btn--small {
+    width: 330px;
+    height: 104px;
+    font-size: 68px;
+    line-height: 81px;
+}
+
+.btn--middle {
+    width: 364px;
+    height: 115px;
+    font-size: 74px;
+    line-height: 89px;
+}
+
+.btn--big {
+    width: 428px;
+    height: 135px;
+    font-size: 82px;
+    line-height: 98px;
+}
+
+.btn--small .btn__inner {
+    background: url('../img/button-small.jpg') 100% 100% no-repeat;
+}
+
+.btn--middle .btn__inner {
+    background: url('../img/button-middle.jpg') 100% 100% no-repeat;
+}
+
+.btn--big .btn__inner {
+    background: url('../img/button-big.jpg') 100% 100% no-repeat;
+}
+
+.btn--small:before {
+    content: '';
+    position: absolute;
+    width: 933px;
+    height: 1038px;
+    top: -455px;
+    left: -180px;
+    z-index: 0;
+    background-size: inherit;
+    background: url('../img/button-small-fire.png') no-repeat;
+    cursor: default;
+}
+
+.btn--big:before {
+    content: '';
+    position: absolute;
+    width: 411px;
+    height: 301px;
+    top: -85px;
+    left: 51px;
+    z-index: 1;
+    background-size: inherit;
+    background: url('../img/button-big-fire-1.png') no-repeat;
+    cursor: default;
+}
+
+.btn--big:after {
+    content: '';
+    position: absolute;
+    width: 413px;
+    height: 304px;
+    top: -91px;
+    right: 222px;
+    z-index: 0;
+    background-size: inherit;
+    background: url('../img/button-big-fire-2.png') no-repeat;
+    cursor: default;
+}
+
+.sins {
+    margin-top: -40px;
+    background: url('../img/sins-bg.png') no-repeat -280px 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sins__title {
+    width: 1267px;
+    margin: 0 auto 88px;
+    text-align: center;
+}
+
+.sins__label {
+    width: 920px;
+    line-height: 79px;
+    margin-left: 184px;
+    margin-bottom: 95px;
+}
+
+.sins__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-right: 340px;
+    margin-left: 184px;
+}
+
+.sins__list {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Resident Evil 7(RUS BY LYAJKA)', Arial, open-sans;
+    text-transform: uppercase;
+    padding-left: 170px;
+    margin-top: 8px;
+    margin-bottom: 170px;
+}
+
+.sins__item {
+    font-size: 67px;
+    line-height: 81px;
+    margin-bottom: 115px;
+    position: relative;
+}
+
+.sins__item:last-child {
+    margin-bottom: 0;
+}
+
+.sins__item:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sins__item--genius:before {
+    width: 109px;
+    height: 166px;
+    right: calc(100% + 60px);
+    background: url('../img/genius.png') 100% 100% no-repeat;
+}
+
+.sins__item--leader:before {
+    width: 146px;
+    height: 188px;
+    right: calc(100% + 43px);
+    background: url('../img/leader.png') 100% 100% no-repeat;
+}
+
+.sins__item--innovator:before {
+    width: 259px;
+    height: 162px;
+    right: 99%;
+    background: url('../img/innovator.png') 100% 100% no-repeat;
+}
+
+.sins__advice {
+    width: 883px;
+    padding: 47px 345px 51px 57px;
+    box-sizing: border-box;
+    background: url('../img/advice-bg.jpg') no-repeat 0 100%;
+    font-size: 22px;
+    line-height: 41px;
+    color: #000;
+    position: relative;
+}
+
+.sins__advice:after {
+    content: '';
+    position: absolute;
+    width: 806px;
+    height: 1172px;
+    left: 415px;
+    top: -333px;
+    background: url('../img/sins-people.png') no-repeat;
+}
+
+.sins__subtitle {
+    margin-left: 206px;
+    margin-bottom: 100px;
+}
+
+.slider {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    animation: slider-anim 15s infinite ease;
+    left: -123px;
+}
+
+@keyframes slider-anim {
+    0% {
+        left: -123px;
+    }
+    20% {
+        left: -312px;
+    }
+    40% {
+        left: -624px;
+    }
+    60% {
+        left: -312px;
+    }
+    80% {
+        left: 0;
+    }
+    100% {
+        left: -123px;
+    }
+}
+
+.slider-item {
+    width: 598px;
+    height: 117px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 15px;
+    padding-right: 65px;
+    font-family: 'Resident Evil 7(RUS BY LYAJKA)', Arial, open-sans;
+    font-size: 56px;
+    line-height: 67px;
+    text-transform: uppercase;
+    background: url('../img/sins-blood.png') no-repeat;
+    margin-right: 50px;
+    flex-shrink: 0;
+}
+
+.assist {
+    padding: 260px 85px 380px 895px;
+    margin-bottom: 77px;
+    background: url('../img/assist-people.png') no-repeat -130px 80px, url('../img/assist-smoke.png') no-repeat 0 0, url('../img/assist-bg-1.png') no-repeat -77px bottom, url('../img/assist-bg-2.png') no-repeat -48px 46px;
+}
+
+.assist__title {
+    margin-bottom: 100px;
+}
+
+.assist__text {
+    margin-bottom: 180px;
+}
+
+.iceberg {
+    padding: 57px 0 211px 386px;
+    overflow: hidden;
+    /*background:
+            url('../img/iceberg-smoke.png') no-repeat 0 0,
+            url('../img/iceberg-bg-1.png') no-repeat 0 0,
+            url('../img/iceberg-fish.png') no-repeat -195px bottom,
+            url('../img/iceberg-shark.png') no-repeat 1035px 640px,
+            url('../img/iceberg-bg-2.png') no-repeat -13px 335px,
+            url('../img/iceberg-bg-3.png') no-repeat -23px 422px,
+            url('../img/iceberg-bg-4.png') no-repeat 0 bottom;*/
+    background:
+            url('../img/iceberg-smoke.png') no-repeat 0 0,
+            url('../img/iceberg-bg-1.png') no-repeat 0 0,
+            url('../img/iceberg-fish.png') no-repeat -195px bottom,
+            url('../img/iceberg-shark.png') no-repeat 1035px 640px,
+            url('../img/iceberg-bg-2.png') no-repeat -13px 335px,
+            url('../img/iceberg-bg-3.png') no-repeat -23px 422px;
+    background-blend-mode: exclusion;
+}
+
+.iceberg__title {
+    margin-left: 36px;
+    width: 1170px;
+    margin-bottom: 215px;
+}
+
+.iceberg__inner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 112px;
+}
+
+.iceberg__label {
+    width: 422px;
+    padding: 32px 28px 36px 18px;
+    box-sizing: border-box;
+    font-size: 28px;
+    line-height: 48px;
+    background: url('../img/iceberg-label-bg.png') no-repeat;
+    color: #000;
+    flex-shrink: 0;
+}
+
+.iceberg__notice {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 1485px;
+    height: 317px;
+    margin-left: 170px;
+    margin-top: 36px;
+    flex-shrink: 0;
+    padding: 12px 0 18px 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+
+.iceberg__notice-column {
+    flex-shrink: 0;
+}
+
+.iceberg__notice-column:first-child {
+    width: 765px;
+}
+
+.iceberg__notice-column:last-child {
+    width: 748px;
+    align-self: flex-end;
+}
+
+.iceberg__label--bottom {
+    margin-right: 400px;
+    margin-left: auto;
+    margin-bottom: 72px;
+    position: relative;
+}
+
+.iceberg__label--bottom:before {
+    content: '';
+    position: absolute;
+    width: 432px;
+    height: 228px;
+    top: 63px;
+    left: -21px;
+    transform: translateX(-100%);
+    background: url('../img/iceberg-line.png') no-repeat;
+}
+
+.iceberg__label--bottom:after {
+    content: '';
+    position: absolute;
+    width: 355px;
+    height: 355px;
+    top: 93px;
+    left: -311px;
+    transform: translateX(-100%);
+    background: url('../img/iceberg-light.png') no-repeat;
+}
+
+.iceberg__text {
+    font-size: 33px;
+    line-height: 39px;
+    margin-left: auto;
+    margin-right: 314px;
+    width: 680px;
+}
+
+.space {
+    padding-top: 195px;
+    padding-bottom: 70px;
+    background: url('../img/space-bg.png') no-repeat 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.space:after {
+    content: '';
+    position: absolute;
+    width: 1218px;
+    height: 1053px;
+    top: 75px;
+    right: -84px;
+    background: url('../img/space-people.jpg') no-repeat;
+}
+
+.space__title {
+    width: 556px;
+    margin-left: 284px;
+    margin-bottom: 85px;
+}
+
+.space__notice {
+    width: 866px;
+    height: 326px;
+    padding: 39px 142px 40px 31px;
+    box-sizing: border-box;
+    background: url('../img/space-notice.png') no-repeat;
+    font-size: 28px;
+    line-height: 41px;
+    color: #000;
+    margin-left: 439px;
+    margin-bottom: 153px;
+}
+
+.space__btn {
+    margin-left: 295px;
+    margin-bottom: 230px;
+}
+
+.chains__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.chains__item {
+    text-align: center;
+    background: url('../img/chains-bg.png') no-repeat 0 0;
+    position: relative;
+    flex-shrink: 0;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.chains__item:before {
+    content: '';
+    position: absolute;
+    width: 236px;
+    height: 87px;
+    background: url('../img/chains-detail.png') no-repeat;
+    z-index: 2;
+    transform: translate(-100%, -50%);
+    top: 50%;
+}
+
+.chains__item:after {
+    content: '';
+    position: absolute;
+    width: 756px;
+    height: 308px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url('../img/chains-bg.png') no-repeat;
+}
+
+.chains__item:nth-child(1) {
+    width: 350px;
+    margin-right: 242px;
+    margin-left: 130px;
+}
+
+.chains__item:nth-child(1):before {
+    left: -51px;
+}
+
+.chains__item:nth-child(1):after {
+    right: -133px;
+}
+
+.chains__item:nth-child(2) {
+    width: 444px;
+    margin-right: 257px;
+}
+
+.chains__item:nth-child(2):before {
+    left: -30px;
+}
+
+.chains__item:nth-child(2):after {
+    right: -100px;
+}
+
+.chains__item:nth-child(3) {
+    width: 337px;
+    margin-right: 295px;
+}
+
+.chains__item:nth-child(3):before {
+    left: -77px;
+}
+
+.chains__item:nth-child(3):after {
+    right: -140px;
+}
+
+.chains__item:nth-child(4) {
+    width: 342px;
+}
+
+.chains__item:nth-child(4):before {
+    left: -77px;
+}
+
+.chains__item:nth-child(4):after {
+    right: -145px;
+}
+
+.chains__text {
+    position: relative;
+    z-index: 1;
+}
+
+.bonfire {
+    padding-top: 153px;
+    background: url('../img/bonfire-bg-1.png') no-repeat -416px 0, url('../img/bonfire-bg-2.png') no-repeat 1005px 111px;
+    overflow: hidden;
+}
+
+.bonfire__title {
+    margin-left: 395px;
+    width: 903px;
+}
+
+.bonfire__title-label {
+    width: 813px;
+    margin-left: 538px;
+    font-size: 33px;
+    line-height: 39px;
+    position: relative;
+    margin-bottom: 75px;
+}
+
+.bonfire__title-label:before {
+    content: '';
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 0;
+    left: -35px;
+    transform: translateX(-100%);
+    background: url('../img/bonfire-title-label-detail.png') no-repeat;
+}
+
+.bonfire__inner {
+    margin-left: 45px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.bonfire__night {
+    width: 906px;
+    height: 477px;
+    box-sizing: border-box;
+    padding: 126px 93px 153px 409px;
+    margin-right: 250px;
+    font-size: 28px;
+    line-height: 40px;
+    color: #000;
+    background: url('../img/bonfire-night-bg.jpg') no-repeat;
+    position: relative;
+    margin-bottom: 137px;
+}
+
+.bonfire__night:before {
+    content: '';
+    position: absolute;
+    width: 338px;
+    height: 267px;
+    top: 96px;
+    left: 44px;
+    background: url('../img/bonfire-night-sticker.png') no-repeat;
+}
+
+.bonfire__call {
+    font-family: 'Resident Evil 7(RUS BY LYAJKA)', Arial, open-sans;
+    text-transform: uppercase;
+}
+
+.bonfire__call span {
+    display: block;
+    text-align: left;
+}
+
+.bonfire__call span:nth-child(1) {
+    font-size: 44px;
+    line-height: 52px;
+}
+
+.bonfire__call span:nth-child(2) {
+    font-size: 179px;
+    line-height: 215px;
+}
+
+.bonfire__call span:nth-child(3) {
+    font-size: 60px;
+    line-height: 72px;
+    margin-top: -35px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.disease {
+    padding: 308px 0 332px 348px;
+    position: relative;
+    overflow: hidden;
+    background: url('../img/disease-bg.png') no-repeat -411px 0;
+}
+
+.disease:after {
+    content: '';
+    position: absolute;
+    width: 1000px;
+    height: 1224px;
+    bottom: 0;
+    right: -215px;
+    background: url('../img/disease-people.png') no-repeat;
+}
+
+.disease__title {
+    width: 1130px;
+    margin-bottom: 154px;
+}
+
+.disease__title-label {
+    font-size: 33px;
+    line-height: 39px;
+    width: 885px;
+    margin-left: 102px;
+    margin-bottom: 107px;
+}
+
+.disease__hidden-text {
+    padding-left: 188px;
+    width: 1769px;
+    text-align: right;
+    margin-left: -43px;
+    position: relative;
+    margin-bottom: 132px;
+}
+
+.disease__hidden-text:before {
+    content: '';
+    position: absolute;
+    width: 644px;
+    height: 737px;
+    top: -265px;
+    left: -214px;
+    background: url('../img/disease__hidden-detail.png') no-repeat;
+}
+
+.disease__content {
+    width: 916px;
+    height: 382px;
+    font-size: 28px;
+    line-height: 42px;
+    color: #000;
+    padding: 50px 155px 42px 40px;
+    box-sizing: border-box;
+    margin-left: 334px;
+    background: url('../img/disease-content-bg.jpg') no-repeat;
+}
+
+.modules {
+    position: relative;
+}
+
+.modules:before {
+    content: '';
+    position: absolute;
+    width: 1225px;
+    height: 1517px;
+    top: -775px;
+    left: -442px;
+    background: url('../img/disease-meteors.png') no-repeat;
+    z-index: 1;
+}
+
+.modules__inner {
+    position: relative;
+    z-index: 2;
+}
+
+.modules__title {
+    text-align: center;
+    margin-bottom: 130px;
+}
+
+.modules__columns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 140px;
+}
+
+.module {
+    width: 696px;
+    margin-top: 9px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-right: 93px;
+}
+
+.module__item {
+    margin-bottom: 12px;
+}
+
+.module__btn {
+    padding-top: 13px;
+    width: 342px;
+    height: 174px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 17px;
+    background: #2F2F2F;
+    cursor: pointer;
+}
+
+.module__btn:not(.too):hover {
+    background: url('../img/module-active.jpg') no-repeat;
+}
+
+.module__btn:not(.too):hover .module__name {
+    color: #F33030;
+}
+
+.module__btn:not(.too):hover .module__label {
+    color: #000001;
+}
+
+.too {
+    background: url('../img/module-too.jpg') no-repeat;
+}
+
+.too .module__name {
+    color: #F33030;
+}
+
+.too .module__label {
+    color: #000001;
+}
+
+.module__name {
+    display: block;
+    font-family: 'Resident Evil 7(RUS BY LYAJKA)', Arial, open-sans;
+    font-size: 56px;
+    line-height: 67px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.module__label {
+    display: block;
+    font-size: 23px;
+    font-weight: 27px;
+    color: #fff;
+}
+
+.modules__text {
+    width: 780px;
+    color: #fff;
+    font-size: 28px;
+    line-height: 95px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.modules__text:after {
+    content: '';
+    position: absolute;
+    width: 178px;
+    height: 209px;
+    top: 399px;
+    right: -155px;
+    background: url('../img/modules-text-detail.png') no-repeat;
+}
+
+.modules__subtitle {
+    display: block;
+    font-family: 'Resident Evil 7(RUS BY LYAJKA)', Arial, open-sans;
+    text-transform: uppercase;
+}
+
+.modules__subtitle--top {
+    font-size: 79px;
+}
+
+.modules__subtitle--top span {
+    color: #F32A2A;
+}
+
+.modules__subtitle--bottom {
+    font-size: 56px;
+    color: #F32A2A;
+}
+
+.fetter {
+    padding-left: 302px;
+    padding-bottom: 290px;
+}
+
+.fetter__label {
+    display: block;
+    font-size: 28px;
+    line-height: 95px;
+    margin-left: 625px;
+    margin-bottom: 35px;
+}
+
+.fetter__column {
+    font-size: 33px;
+    line-height: 45px;
+    width: 766px;
+    margin-bottom: 223px;
+}
+
+.fetter__text {
+    margin-bottom: 45px;
+    position: relative;
+}
+
+.fetter__text:before {
+    content: '';
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 0;
+    left: -35px;
+    transform: translateX(-100%);
+    background: url('../img/bonfire-title-label-detail.png') no-repeat;
+}
+
+.compare {
+    background: url('../img/compare-bg.png') no-repeat -74px bottom;
+}
+
+.compare__inner {
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 280px;
+}
+
+.compare__title {
+    text-align: center;
+}
+
+.compare__subtitle {
+    display: block;
+    text-align: center;
+    margin-bottom: 135px;
+}
+
+.compare__columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.compare__column {
+    width: 620px;
+}
+
+.compare__column:first-child {
+    width: 603px;
+}
+
+.compare__column:last-child {
+    width: 680px;
+}
+
+.compare__text {
+    font-size: 33px;
+    line-height: 45px;
+}
+
+.compare__column-title {
+    margin-bottom: 50px;
+}
+
+.free {
+    padding-left: 178px;
+    padding-right: 198px;
+    padding-bottom: 355px;
+}
+
+.free__title {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.free__columns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.free__list {
+    width: 621px;
+    line-height: 45px;
+    color: rgba(255, 255, 255, 0.88);
+    flex-shrink: 0;
+    padding-top: 220px;
+    padding-bottom: 170px;
+    margin-right: 57px;
+}
+
+.free__list-item {
+    margin-bottom: 45px;
+    position: relative;
+}
+
+.free__list-item.ok-first:before {
+    content: '';
+    position: absolute;
+    width: 77px;
+    height: 57px;
+    right: -220px;
+    top: 50%;
+    transform: translate(100%,-50%);
+    background: url('../img/free-ok.png') no-repeat;
+}
+
+.free__list-item.ok-second:after {
+    content: '';
+    position: absolute;
+    width: 77px;
+    height: 57px;
+    right: -655px;
+    top: 50%;
+    transform: translate(100%,-50%);
+    background: url('../img/free-ok.png') no-repeat;
+}
+
+.free__list-item.no-first:before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    right: -230px;
+    top: 50%;
+    transform: translate(100%,-50%);
+    background: url('../img/free-no.png') no-repeat;
+}
+
+.free__list-item.no-second:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    right: -665px;
+    top: 50%;
+    transform: translate(100%,-50%);
+    background: url('../img/free-no.png') no-repeat;
+}
+
+.free__item-name {
+    font-weight: bold;
+    font-size: 34px;
+}
+
+.free__item-text {
+    font-size: 28px;
+    position: relative;
+}
+
+.free__list-item:not(:last-child) .free__item-text:after {
+    content: '';
+    position: absolute;
+    width: 1537px;
+    height: 1px;
+    left: 0;
+    bottom: -20px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.free__column {
+    border-radius: 20px;
+    padding-top: 33px;
+    padding-bottom: 23px;
+    width: 412px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.free__column--red {
+    background: #C02B2B;
+    margin-right: 30px;
+}
+
+.free__column--blue {
+    background: #292A96;
+}
+
+.free__column-name {
+    font-family: 'Resident Evil 7(RUS BY LYAJKA)', Arial, open-sans;
+    display: block;
+    text-align: center;
+    font-size: 67px;
+    line-height: 81px;
+    text-transform: uppercase;
+}
+
+.free__column-label {
+    display: block;
+    font-size: 23px;
+    line-height: 34px;
+    text-align: center;
+}
+
+.free__column--red .free__column-label {
+    width: 304px;
+}
+
+.free__column--blue .free__column-label {
+    width: 350px;
+}
+
+.free__column-price {
+    display: block;
+    text-align: center;
+    font-size: 45px;
+    line-height: 54px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.witcher {
+    padding-top: 157px;
+    padding-bottom: 160px;
+    margin-top: -117px;
+    background: url('../img/witcher-bg.png') no-repeat -383px 0;
+}
+
+.witcher__title {
+    text-align: center;
+    margin-bottom: 130px;
+}
+
+.witcher__module {
+    margin-left: 559px;
+    width: 980px;
+    height: 351px;
+    box-sizing: border-box;
+    padding: 52px 101px 44px 44px;
+    background: url('../img/witcher-module-bg.jpg') no-repeat;
+    color: #000;
+    position: relative;
+    margin-bottom: 160px;
+}
+
+.witcher__module:after {
+    content: '';
+    position: absolute;
+    width: 923px;
+    height: 593px;
+    bottom: -110px;
+    left: 216px;
+    background: url('../img/witcher-module-bg-2.png') no-repeat;
+    z-index: 1;
+}
+
+.witcher__module-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.witcher__module-title {
+    font-family: 'Resident Evil 7(RUS BY LYAJKA)', Arial, open-sans;
+    font-size: 56px;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+.witcher__module-title span {
+    color: #F32A2A;
+}
+
+.witcher__module-text {
+    font-size: 28px;
+    line-height: 40px;
+}
+
+.witcher__about {
+    margin-left: 145px;
+    padding-left: 393px;
+    width: 450px;
+    position: relative;
+    margin-bottom: 122px;
+}
+
+.witcher__about:before {
+    content: '';
+    position: absolute;
+    width: 413px;
+    height: 396px;
+    top: -139px;
+    left: 0;
+    background: url('../img/witcher-about-face.png') no-repeat;
+}
+
+.witcher__about-text {
+    font-size: 28px;
+    line-height: 40px;
+}
+
+.witcher__bonus {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 140px;
+}
+
+.witcher__bonus-take {
+    width: 428px;
+}
+
+.witcher__btn {
+    margin-bottom: 8px;
+}
+
+.witcher__btn:before {
+    display: none;
+}
+
+.witcher__btn:after {
+    display: none;
+}
+
+.witcher__bonus-timer {
+    font-size: 34px;
+    line-height: 40px;
+    display: block;
+    text-align: center;
+}
+
+.witcher__bonus-take {
+    margin-top: 15px;
+    margin-right: 53px;
+}
+
+.witcher__bonus-conditions {
+    width: 850px;
+    font-size: 28px;
+    line-height: 40px;
+}
+
+.bridges {
+    margin-top: -160px;
+    padding: 272px 192px 71px 140px;
+    background: url('../img/bridges-bg.png') no-repeat -140px 0;
+}
+
+.bridges__title {
+    width: 590px;
+    margin: 0 auto 92px;
+    text-align: center;
+}
+
+.bridges__columns {
+    display: flex;
+}
+
+.bridges__text {
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 40px;
+}
+
+.bridges__text span {
+    color: #B40000;
+}
+
+.bridges__text:nth-child(1) {
+    width: 693px;
+}
+
+.bridges__text:nth-child(2) {
+    width: 616px;
+    margin-bottom: 120px;
+}
+
+.bridges__video {
+    margin-left: 272px;
+    margin-top: 77px;
+}
