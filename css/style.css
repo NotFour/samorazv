@@ -51,12 +51,15 @@ body {
     font-size: 32px;
     color: #fff;
     margin: 0;
+    background: #000;
 }
 
 .page {
     background: #000;
     user-select: none;
     overflow: hidden;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 .title {
