@@ -22,6 +22,15 @@
     font-weight: 400;
     font-style: regular;
 }
+@font-face {
+    font-family: "ProximaNova";
+    src: url("../fonts/ProximaNova-Bold.eot");
+    src: url("../fonts/ProximaNova-Bold.eot?iefix") format("eot");
+    src: url("../fonts/ProximaNova-Bold.woff") format("woff");
+    src: url("../fonts/ProximaNova-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: bold;
+}
 
 p {
     margin: 0;
@@ -113,7 +122,7 @@ body {
 
 .header__label {
     display: block;
-    width: 630px;
+    width: 635px;
     margin-left: 95px;
     margin-bottom: 100px;
 }
@@ -294,11 +303,12 @@ body {
     width: 883px;
     padding: 47px 345px 51px 57px;
     box-sizing: border-box;
-    background: url('../img/advice-bg.jpg') no-repeat 0 100%;
+    background: url('../img/advice-bg.jpg') no-repeat;
     font-size: 22px;
     line-height: 41px;
     color: #000;
     position: relative;
+    border-radius: 45px;
 }
 
 .sins__advice:after {
@@ -414,6 +424,7 @@ body {
 
 .iceberg__label {
     width: 422px;
+    height: 151px;
     padding: 32px 28px 36px 18px;
     box-sizing: border-box;
     font-size: 28px;
@@ -421,6 +432,7 @@ body {
     background: url('../img/iceberg-label-bg.png') no-repeat;
     color: #000;
     flex-shrink: 0;
+    border-radius: 11px;
 }
 
 .iceberg__notice {
@@ -499,11 +511,11 @@ body {
 .space:after {
     content: '';
     position: absolute;
-    width: 1218px;
-    height: 1053px;
+    width: 1119px;
+    height: 1056px;
     top: 75px;
-    right: -84px;
-    background: url('../img/space-people.jpg') no-repeat;
+    right: 0;
+    background: url('../img/space-people.png') no-repeat;
 }
 
 .space__title {
@@ -523,6 +535,7 @@ body {
     color: #000;
     margin-left: 439px;
     margin-bottom: 153px;
+    border-radius: 30px;
 }
 
 .space__btn {
@@ -631,7 +644,7 @@ body {
 
 .bonfire__title {
     margin-left: 395px;
-    width: 903px;
+    margin-bottom: 110px;
 }
 
 .bonfire__title-label {
@@ -640,7 +653,7 @@ body {
     font-size: 33px;
     line-height: 39px;
     position: relative;
-    margin-bottom: 75px;
+    margin-bottom: 187px;
 }
 
 .bonfire__title-label:before {
@@ -670,7 +683,7 @@ body {
     font-size: 28px;
     line-height: 40px;
     color: #000;
-    background: url('../img/bonfire-night-bg.jpg') no-repeat;
+    background: url('../img/bonfire-night-bg.png') no-repeat;
     position: relative;
     margin-bottom: 137px;
 }
@@ -723,10 +736,10 @@ body {
 .disease:after {
     content: '';
     position: absolute;
-    width: 1000px;
-    height: 1224px;
-    bottom: 0;
-    right: -215px;
+    width: 574px;
+    height: 999px;
+    bottom: 62px;
+    right: 0px;
     background: url('../img/disease-people.png') no-repeat;
 }
 
@@ -744,9 +757,7 @@ body {
 }
 
 .disease__hidden-text {
-    padding-left: 188px;
-    width: 1769px;
-    text-align: right;
+    padding-left: 228px;
     margin-left: -43px;
     position: relative;
     margin-bottom: 132px;
@@ -772,10 +783,12 @@ body {
     box-sizing: border-box;
     margin-left: 334px;
     background: url('../img/disease-content-bg.jpg') no-repeat;
+    border-radius: 30px;
 }
 
 .modules {
     position: relative;
+    padding-bottom: 370px;
 }
 
 .modules:before {
@@ -831,19 +844,22 @@ body {
     cursor: pointer;
 }
 
-.module__btn:not(.too):hover {
+.module__btn:not(.too):hover, .module__btn.active {
     background: url('../img/module-active.jpg') no-repeat;
 }
 
-.module__btn:not(.too):hover .module__name {
+.module__btn:not(.too):hover .module__name, .module__btn.active .module__name {
     color: #F33030;
 }
 
-.module__btn:not(.too):hover .module__label {
+.module__btn:not(.too):hover .module__label, .module__btn.active .module__label {
     color: #000001;
 }
 
 .too {
+    display: block;
+    padding-top: 47px;
+    text-decoration: none;
     background: url('../img/module-too.jpg') no-repeat;
 }
 
@@ -872,22 +888,114 @@ body {
 }
 
 .modules__text {
-    width: 780px;
     color: #fff;
     font-size: 28px;
-    line-height: 95px;
+    line-height: 39px;
     flex-shrink: 0;
-    position: relative;
+    position: absolute;
+    display: none;
 }
 
-.modules__text:after {
+.modules__text--1 {
+    width: 645px;
+}
+
+.modules__text--2 {
+    width: 708px;
+}
+
+.modules__text--3 {
+    width: 830px;
+}
+
+.modules__text--4 {
+    width: 785px;
+}
+
+.modules__text--5 {
+    width: 772px;
+}
+
+.modules__text--6 {
+    width: 835px;
+}
+
+.modules__text--7 {
+    width: 784px;
+}
+
+.modules__text.active {
+    display: block;
+}
+
+.modules__text--1:after {
+    content: '';
+    position: absolute;
+    width: 226px;
+    height: 305px;
+    top: 345px;
+    right: -291px;
+    background: url('../img/modules-text-detail-1.png') no-repeat;
+}
+
+.modules__text--2:after {
+    content: '';
+    position: absolute;
+    width: 271px;
+    height: 296px;
+    top: 360px;
+    right: -223px;
+    background: url('../img/modules-text-detail-2.png') no-repeat;
+}
+
+.modules__text--3:after {
+    content: '';
+    position: absolute;
+    width: 280px;
+    height: 290px;
+    top: 366px;
+    right: -103px;
+    background: url('../img/modules-text-detail-3.png') no-repeat;
+}
+
+.modules__text--4:after {
+    content: '';
+    position: absolute;
+    width: 294px;
+    height: 306px;
+    top: 413px;
+    right: -171px;
+    background: url('../img/modules-text-detail-4.png') no-repeat;
+}
+
+.modules__text--5:after {
+    content: '';
+    position: absolute;
+    width: 269px;
+    height: 245px;
+    top: 399px;
+    right: -165px;
+    background: url('../img/modules-text-detail-5.png') no-repeat;
+}
+
+.modules__text--6:after {
+    content: '';
+    position: absolute;
+    width: 245px;
+    height: 344px;
+    top: 399px;
+    right: -120px;
+    background: url('../img/modules-text-detail-6.png') no-repeat;
+}
+
+.modules__text--7:after {
     content: '';
     position: absolute;
     width: 178px;
     height: 209px;
     top: 399px;
     right: -155px;
-    background: url('../img/modules-text-detail.png') no-repeat;
+    background: url('../img/modules-text-detail-7.png') no-repeat;
 }
 
 .modules__subtitle {
@@ -898,6 +1006,7 @@ body {
 
 .modules__subtitle--top {
     font-size: 79px;
+    line-height: 1;
 }
 
 .modules__subtitle--top span {
@@ -910,8 +1019,31 @@ body {
 }
 
 .fetter {
+    margin-top: -448px;
+    background: url('../img/fetter-people.png') no-repeat 964px 574px, url('../img/fetter-smoke.png') no-repeat right 317px ,url('../img/fetter-bg.png') no-repeat right top;
+    position: relative;
+}
+
+.fetter:before {
+    content: '';
+    position: absolute;
+    width: 886px;
+    height: 1369px;
+    top: -145px;
+    right: -359px;
+    background: url('../img/fetter-detail.png') no-repeat;
+}
+
+.fetter__inner {
     padding-left: 302px;
     padding-bottom: 290px;
+    padding-top: 448px;
+    position: relative;
+    z-index: 2;
+}
+
+.fetter__title {
+    margin-bottom: 140px;
 }
 
 .fetter__label {
@@ -947,12 +1079,25 @@ body {
 
 .compare {
     background: url('../img/compare-bg.png') no-repeat -74px bottom;
+    position: relative;
+    z-index: 1;
+}
+
+.compare::before {
+    content: '';
+    position: absolute;
+    width: 514px;
+    height: 1369px;
+    top: -828px;
+    left: 0;
+    background: url('../img/compare-detail-1.png') no-repeat;
 }
 
 .compare__inner {
     padding-left: 150px;
     padding-right: 150px;
     padding-bottom: 280px;
+    position: relative;
 }
 
 .compare__title {
@@ -993,9 +1138,20 @@ body {
 }
 
 .free {
-    padding-left: 178px;
-    padding-right: 198px;
-    padding-bottom: 355px;
+    padding: 754px 198px 355px 178px;
+    margin-top: -754px;
+    background: url('../img/fire-bg.png') no-repeat -27px bottom;
+    position: relative;
+}
+
+.free:after {
+    content: '';
+    position: absolute;
+    top: 524px;
+    right: 46px;
+    width: 508px;
+    height: 331px;
+    background: url('../img/free-detail.png') no-repeat;
 }
 
 .free__title {
@@ -1168,10 +1324,10 @@ body {
 .witcher__module:after {
     content: '';
     position: absolute;
-    width: 923px;
-    height: 593px;
-    bottom: -110px;
-    left: 216px;
+    width: 855px;
+    height: 528px;
+    bottom: -78px;
+    left: 271px;
     background: url('../img/witcher-module-bg-2.png') no-repeat;
     z-index: 1;
 }
@@ -1281,6 +1437,7 @@ body {
     font-size: 28px;
     line-height: 40px;
     margin-bottom: 40px;
+    font-weight: bold;
 }
 
 .bridges__text span {
@@ -1288,7 +1445,7 @@ body {
 }
 
 .bridges__text:nth-child(1) {
-    width: 693px;
+    width: 700px;
 }
 
 .bridges__text:nth-child(2) {
@@ -1299,4 +1456,8 @@ body {
 .bridges__video {
     margin-left: 272px;
     margin-top: 77px;
+}
+
+.bridges__content {
+    border-radius: 35px;
 }
