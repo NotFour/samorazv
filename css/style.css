@@ -107,7 +107,7 @@ body {
 .header {
     padding: 70px 85px 580px;
     background-size: inherit;
-    background: url('../img/header-people.png') no-repeat 88% 158px, url('../img/header-people-dust.png') no-repeat 105% 95%, url('../img/header-smoke.png') no-repeat 102% 97%, url('../img/header-dust.png') no-repeat -185px -136px;
+    background: url('../img/header-people.png') no-repeat 88% 158px, url('../img/header-dust.png') no-repeat 0 0, url('../img/header-smoke.png') no-repeat right 97%, url('../img/header-people-dust.png') no-repeat -185px -136px;
 }
 
 .owner {
@@ -151,6 +151,7 @@ body {
     text-decoration: none;
     color: #000;
     z-index: 2;
+    box-sizing: border-box;
 }
 
 .btn--small {
@@ -161,29 +162,32 @@ body {
 }
 
 .btn--middle {
-    width: 364px;
+    width: 363px;
     height: 115px;
     font-size: 74px;
     line-height: 89px;
 }
 
 .btn--big {
-    width: 428px;
+    width: 427px;
     height: 135px;
     font-size: 82px;
     line-height: 98px;
 }
 
 .btn--small .btn__inner {
-    background: url('../img/button-small.jpg') 100% 100% no-repeat;
+    padding-bottom: 9px;
+    background: url('../img/button-small.png') 100% 100% no-repeat;
 }
 
 .btn--middle .btn__inner {
-    background: url('../img/button-middle.jpg') 100% 100% no-repeat;
+    padding-bottom: 10px;
+    background: url('../img/button-middle.png') 100% 100% no-repeat;
 }
 
 .btn--big .btn__inner {
-    background: url('../img/button-big.jpg') 100% 100% no-repeat;
+    padding-bottom: 15px;
+    background: url('../img/button-big.png') 100% 100% no-repeat;
 }
 
 .btn--small:before {
@@ -227,7 +231,7 @@ body {
 
 .sins {
     margin-top: -40px;
-    background: url('../img/sins-bg.png') no-repeat -280px 50px;
+    background: url('../img/sins-bg.png') no-repeat 0 50px;
     position: relative;
     overflow: hidden;
 }
@@ -306,7 +310,7 @@ body {
     width: 883px;
     padding: 47px 345px 51px 57px;
     box-sizing: border-box;
-    background: url('../img/advice-bg.jpg') no-repeat;
+    background: url('../img/advice-bg.png') no-repeat;
     font-size: 22px;
     line-height: 41px;
     color: #000;
@@ -317,10 +321,10 @@ body {
 .sins__advice:after {
     content: '';
     position: absolute;
-    width: 806px;
-    height: 1172px;
-    left: 415px;
-    top: -333px;
+    width: 735px;
+    height: 1089px;
+    left: 485px;
+    top: -300px;
     background: url('../img/sins-people.png') no-repeat;
 }
 
@@ -380,7 +384,7 @@ body {
 .assist {
     padding: 260px 85px 380px 895px;
     margin-bottom: 77px;
-    background: url('../img/assist-people.png') no-repeat -130px 80px, url('../img/assist-smoke.png') no-repeat 0 0, url('../img/assist-bg-1.png') no-repeat -77px bottom, url('../img/assist-bg-2.png') no-repeat -48px 46px;
+    background: url('../img/assist-people.png') no-repeat 0 130px, url('../img/assist-smoke.png') no-repeat 0 0, url('../img/assist-bg-1.png') no-repeat 0 bottom, url('../img/assist-bg-2.png') no-repeat 0 46px;
 }
 
 .assist__title {
@@ -405,10 +409,11 @@ body {
     background:
             url('../img/iceberg-smoke.png') no-repeat 0 0,
             url('../img/iceberg-bg-1.png') no-repeat 0 0,
-            url('../img/iceberg-fish.png') no-repeat -195px bottom,
-            url('../img/iceberg-shark.png') no-repeat 1035px 640px,
-            url('../img/iceberg-bg-2.png') no-repeat -13px 335px,
-            url('../img/iceberg-bg-3.png') no-repeat -23px 422px;
+            url('../img/iceberg-fish.png') no-repeat 0 bottom,
+            url('../img/iceberg-shark.png') no-repeat right 640px,
+            url('../img/iceberg-bg-2.png') no-repeat 0 335px,
+            url('../img/iceberg-bg-3.png') no-repeat 0 422px,
+            url('../img/iceberg-bg-4.png') no-repeat 0 bottom;
     background-blend-mode: exclusion;
 }
 
@@ -449,7 +454,7 @@ body {
     margin-top: 36px;
     flex-shrink: 0;
     padding: 12px 0 18px 20px;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.6);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -488,10 +493,10 @@ body {
 .iceberg__label--bottom:after {
     content: '';
     position: absolute;
-    width: 355px;
-    height: 355px;
-    top: 93px;
-    left: -311px;
+    width: 323px;
+    height: 323px;
+    top: 110px;
+    left: -327px;
     transform: translateX(-100%);
     background: url('../img/iceberg-light.png') no-repeat;
 }
@@ -642,7 +647,7 @@ body {
 
 .bonfire {
     padding-top: 153px;
-    background: url('../img/bonfire-bg-1.png') no-repeat -416px 0, url('../img/bonfire-bg-2.png') no-repeat 1005px 111px;
+    background: url('../img/bonfire-bg-1.png') no-repeat 0 0, url('../img/bonfire-bg-2.png') no-repeat right 111px;
     overflow: hidden;
 }
 
@@ -679,8 +684,8 @@ body {
 }
 
 .bonfire__night {
-    width: 906px;
-    height: 477px;
+    width: 973px;
+    height: 499px;
     box-sizing: border-box;
     padding: 126px 93px 153px 409px;
     margin-right: 250px;
@@ -734,7 +739,7 @@ body {
     padding: 308px 0 332px 348px;
     position: relative;
     overflow: hidden;
-    background: url('../img/disease-bg.png') no-repeat -411px 0;
+    background: url('../img/disease-bg.png') no-repeat 0 0;
 }
 
 .disease:after {
@@ -770,11 +775,11 @@ body {
 .disease__hidden-text:before {
     content: '';
     position: absolute;
-    width: 644px;
-    height: 737px;
-    top: -265px;
-    left: -214px;
-    background: url('../img/disease__hidden-detail.png') no-repeat;
+    width: 463px;
+    height: 565px;
+    top: -188px;
+    left: -121px;
+    background: url('../img/disease-hidden-detail.png') no-repeat;
 }
 
 .disease__content {
@@ -786,7 +791,7 @@ body {
     padding: 50px 155px 42px 40px;
     box-sizing: border-box;
     margin-left: 334px;
-    background: url('../img/disease-content-bg.jpg') no-repeat;
+    background: url('../img/disease-content-bg.png') no-repeat;
     border-radius: 30px;
 }
 
@@ -801,7 +806,7 @@ body {
     width: 1225px;
     height: 1517px;
     top: -775px;
-    left: -442px;
+    left: 0;
     background: url('../img/disease-meteors.png') no-repeat;
     z-index: 1;
 }
@@ -849,7 +854,7 @@ body {
 }
 
 .module__btn:not(.too):hover, .module__btn.active {
-    background: url('../img/module-active.jpg') no-repeat;
+    background: url('../img/module-active.png') no-repeat;
 }
 
 .module__btn:not(.too):hover .module__name, .module__btn.active .module__name {
@@ -864,7 +869,7 @@ body {
     display: block;
     padding-top: 47px;
     text-decoration: none;
-    background: url('../img/module-too.jpg') no-repeat;
+    background: url('../img/module-too.png') no-repeat;
 }
 
 .too .module__name {
@@ -1024,18 +1029,29 @@ body {
 
 .fetter {
     margin-top: -448px;
-    background: url('../img/fetter-people.png') no-repeat 964px 574px, url('../img/fetter-smoke.png') no-repeat right 317px ,url('../img/fetter-bg.png') no-repeat right top;
+    background: url('../img/fetter-smoke.png') no-repeat right 317px ,url('../img/fetter-bg.png') no-repeat 0 top;
     position: relative;
 }
 
 .fetter:before {
     content: '';
     position: absolute;
-    width: 886px;
+    width: 527px;
     height: 1369px;
     top: -145px;
-    right: -359px;
+    right: 0;
     background: url('../img/fetter-detail.png') no-repeat;
+}
+
+.fetter:after {
+    content: '';
+    position: absolute;
+    width: 922px;
+    height: 1227px;
+    top: 580px;
+    right: 0;
+    background: url('../img/fetter-people.png') no-repeat;
+    z-index: 1;
 }
 
 .fetter__inner {
@@ -1082,7 +1098,7 @@ body {
 }
 
 .compare {
-    background: url('../img/compare-bg.png') no-repeat -74px bottom;
+    background: url('../img/compare-bg.png') no-repeat 0 bottom;
     position: relative;
     z-index: 1;
 }
@@ -1144,7 +1160,7 @@ body {
 .free {
     padding: 754px 198px 355px 178px;
     margin-top: -754px;
-    background: url('../img/fire-bg.png') no-repeat -27px bottom;
+    background: url('../img/fire-bg.png') no-repeat 0 bottom;
     position: relative;
 }
 
@@ -1305,7 +1321,7 @@ body {
     padding-top: 157px;
     padding-bottom: 160px;
     margin-top: -117px;
-    background: url('../img/witcher-bg.png') no-repeat -383px 0;
+    background: url('../img/witcher-bg.png') no-repeat 0 0;
 }
 
 .witcher__title {
@@ -1319,7 +1335,7 @@ body {
     height: 351px;
     box-sizing: border-box;
     padding: 52px 101px 44px 44px;
-    background: url('../img/witcher-module-bg.jpg') no-repeat;
+    background: url('../img/witcher-module-bg.png') no-repeat;
     color: #000;
     position: relative;
     margin-bottom: 160px;
@@ -1424,7 +1440,7 @@ body {
 .bridges {
     margin-top: -160px;
     padding: 272px 192px 71px 140px;
-    background: url('../img/bridges-bg.png') no-repeat -140px 0;
+    background: url('../img/bridges-bg.png') no-repeat 0 0;
 }
 
 .bridges__title {
