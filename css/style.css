@@ -156,7 +156,7 @@ body {
     position: relative;
     text-decoration: none;
     color: #000;
-    z-index: 2;
+    z-index: 3;
     box-sizing: border-box;
 }
 
@@ -201,11 +201,24 @@ body {
 .btn--small:before {
     content: '';
     position: absolute;
-    width: 933px;
-    height: 1038px;
-    top: -455px;
+    width: 893px;
+    height: 514px;
+    top: -208px;
     left: -180px;
-    z-index: 0;
+    z-index: 1;
+    background-size: inherit;
+    background: url('../img/button-small-smoke.png') no-repeat;
+    cursor: default;
+}
+
+.btn--small:after {
+    content: '';
+    position: absolute;
+    width: 378px;
+    height: 216px;
+    top: -47px;
+    left: -6px;
+    z-index: 2;
     background-size: inherit;
     background: url('../img/button-small-fire.png') no-repeat;
     cursor: default;
@@ -214,26 +227,13 @@ body {
 .btn--big:before {
     content: '';
     position: absolute;
-    width: 411px;
-    height: 301px;
-    top: -85px;
-    left: 51px;
+    width: 470px;
+    height: 268px;
+    top: -55px;
+    left: -1px;
     z-index: 1;
     background-size: inherit;
-    background: url('../img/button-big-fire-1.png') no-repeat;
-    cursor: default;
-}
-
-.btn--big:after {
-    content: '';
-    position: absolute;
-    width: 413px;
-    height: 304px;
-    top: -91px;
-    right: 222px;
-    z-index: 0;
-    background-size: inherit;
-    background: url('../img/button-big-fire-2.png') no-repeat;
+    background: url('../img/button-big-fire.png') no-repeat;
     cursor: default;
 }
 
@@ -440,7 +440,7 @@ body {
 .iceberg__label {
     width: 422px;
     height: 151px;
-    padding: 32px 28px 36px 18px;
+    padding: 32px 10px 36px 18px;
     box-sizing: border-box;
     font-size: 28px;
     line-height: 48px;
@@ -524,16 +524,6 @@ body {
     overflow: hidden;
 }
 
-.space:after {
-    content: '';
-    position: absolute;
-    width: 1119px;
-    height: 1056px;
-    top: 75px;
-    right: 0;
-    background: url('../img/space-people.png') no-repeat;
-}
-
 .space__title {
     width: 556px;
     margin-left: 284px;
@@ -552,6 +542,17 @@ body {
     margin-left: 439px;
     margin-bottom: 153px;
     border-radius: 30px;
+    position: relative;
+}
+
+.space__notice:after {
+    content: '';
+    position: absolute;
+    width: 1119px;
+    height: 1056px;
+    top: -450px;
+    right: -600px;
+    background: url('../img/space-people.png') no-repeat;
 }
 
 .space__btn {
