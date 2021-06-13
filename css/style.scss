@@ -1,4 +1,5 @@
 $desktop: 'min-width: 1920px';
+$laptop: 'min-width: 1080px';
 $tablet: 'min-width: 768px';
 
 @font-face {
@@ -103,15 +104,25 @@ body {
     }
 
     &--middle {
-        font-size: 7.0rem;
-        line-height: 1.2;
+        font-size: 26px;
+        line-height: 1;
         letter-spacing: 1.3px;
+
+        @media screen and ($tablet) {
+            font-size: 7.0rem;
+            line-height: 1.2;
+        }
     }
 
     &--big {
-        font-size: 10.1rem;
-        line-height: 1.2;
+        font-size: 30px;
+        line-height: 1;
         letter-spacing: 2.2px;
+
+        @media screen and ($tablet) {
+            font-size: 10.1rem;
+            line-height: 1.2;
+        }
     }
 
     &--red {
@@ -248,24 +259,37 @@ body {
 .header {
     padding: 20px 20px 100px;
     background-size: inherit;
-    background: url('../img/header-people.png') no-repeat 88% 158px, url('../img/header-dust.png') no-repeat 0 0, url('../img/header-smoke.png') no-repeat right 97%, url('../img/header-people-dust.png') no-repeat -185px -136px;
+    background: url("../img/header-people.png") no-repeat 50% 380px, url("../img/header-dust.png") no-repeat 0 0, url("../img/header-smoke.png") no-repeat right 97%, url("../img/header-people-dust.png") no-repeat -185px -136px;
+    background-size: 50%;
 
     @media screen and ($tablet) {
         padding: 50px 50px 200px;
+        background: url('../img/header-people.png') no-repeat 88% 158px, url('../img/header-dust.png') no-repeat 0 0, url('../img/header-smoke.png') no-repeat 85% 590px, url('../img/header-people-dust.png') no-repeat -185px -136px;
+        background-size: 30%;
     }
 
     @media screen and ($desktop) {
         padding: 70px 85px 580px;
+        background: url('../img/header-people.png') no-repeat 88% 158px, url('../img/header-dust.png') no-repeat 0 0, url('../img/header-smoke.png') no-repeat right 97%, url('../img/header-people-dust.png') no-repeat -185px -136px;
+        background-size: unset;
     }
 }
 
 .owner {
     display: block;
-    max-width: 519px;
-    margin-bottom: 100px;
+    max-width: 300px;
     user-select: text;
+    text-align: center;
+    margin: 0 auto 100px;
 
     @media screen and ($tablet) {
+        margin: 0;
+        margin-bottom: 200px;
+        max-width: 519px;
+        text-align: left;
+    }
+
+    @media screen and ($desktop) {
         margin-bottom: 325px;
     }
 }
@@ -274,30 +298,47 @@ body {
     max-width: 860px;
     margin-left: 0;
     margin-right: 0;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
+    text-align: center;
 
     @media screen and ($tablet) {
         margin-left: 100px;
+        text-align: left;
+    }
+
+    @media screen and ($desktop) {
+        margin-bottom: 80px;
     }
 }
 
 .header__label {
     display: block;
-    max-width: 635px;
-    margin-bottom: 100px;
+    max-width: 300px;
+    margin: 0 auto 410px;
+    text-align: center;
 
     @media screen and ($tablet) {
+        margin: 0;
         margin-left: 95px;
+        margin-bottom: 50px;
+        max-width: 635px;
+        text-align: left;
+    }
+
+    @media screen and ($desktop) {
+        margin-bottom: 100px;
     }
 }
 
 .header__btn {
-    margin-left: -83px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: -50px;
 
     @media screen and ($tablet) {
         margin-left: 55px;
         margin-top: -15px;
+        margin-right: unset;
     }
 
     @media screen and ($desktop) {
@@ -315,7 +356,7 @@ body {
 
 .sins__title {
     max-width: 1267px;
-    margin-bottom: 88px;
+    margin-bottom: 40px;
     text-align: center;
     padding-left: 20px;
     padding-right: 20px;
@@ -324,20 +365,24 @@ body {
         margin: 0 auto 88px;
         padding-left: 50px;
         padding-right: 50px;
+        font-size: 6rem;
     }
 
     @media screen and ($desktop) {
         padding: 0;
+        font-size: 10.1rem;
     }
 }
 
 .sins__label {
     max-width: 920px;
     margin-left: 20px;
+    margin-right: 20px;
     margin-bottom: 95px;
 
     @media screen and ($tablet) {
         margin-left: 50px;
+        margin-right: 0;
     }
 
     @media screen and ($desktop) {
@@ -349,25 +394,27 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 200px;
+    align-items: flex-start;
+    margin-bottom: 50px;
 
     @media screen and ($tablet) {
         margin-left: 92px;
         margin-right: 92px;
-        align-items: flex-start;
         margin-bottom: 400px;
     }
 
-    @media screen and ($desktop) {
+    @media screen and ($laptop) {
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
+        margin-right: 50px;
+        margin-left: 50px;
+        margin-bottom: 0;
+    }
+
+    @media screen and ($desktop) {
         margin-right: 340px;
         margin-left: 184px;
-        margin-bottom: 0;
     }
 }
 
@@ -376,15 +423,20 @@ body {
     width: 100%;
     font-family: 'Resident Evil 7(RUS BY LYAJKA)', Arial, open-sans;
     text-transform: uppercase;
-    margin-top: 8px;
-    margin-bottom: 100px;
     justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 8px 0 100px;
+    box-sizing: border-box;
 
     @media screen and ($tablet) {
-        margin-bottom: 292px;
+        margin-bottom: 120px;
+        padding-left: 0;
+        padding-right: 0;
+        box-sizing: content-box;
     }
 
-    @media screen and ($desktop) {
+    @media screen and ($laptop) {
         width: auto;
         flex-direction: column;
         padding-left: 170px;
@@ -403,7 +455,7 @@ body {
         padding: 188px 33px 0;
     }
 
-    @media screen and ($desktop) {
+    @media screen and ($laptop) {
         margin-bottom: 115px;
         padding: 0;
     }
@@ -411,13 +463,13 @@ body {
     &:before {
         content: '';
         position: absolute;
-        bottom: 80px;
+        bottom: 30px;
 
         @media screen and ($tablet) {
-            bottom: 35px;
+            bottom: 60px;
         }
 
-        @media screen and ($desktop) {
+        @media screen and ($laptop) {
             top: 50%;
         }
     }
@@ -438,7 +490,7 @@ body {
                 transform: translateX(50%);
             }
 
-            @media screen and ($desktop) {
+            @media screen and ($laptop) {
                 width: 109px;
                 height: 166px;
                 right: calc(100% + 60px);
@@ -460,7 +512,7 @@ body {
                 transform: translateX(50%);
             }
 
-            @media screen and ($desktop) {
+            @media screen and ($laptop) {
                 width: 146px;
                 height: 188px;
                 right: calc(100% + 43px);
@@ -482,7 +534,7 @@ body {
                 transform: translateX(50%);
             }
 
-            @media screen and ($desktop) {
+            @media screen and ($laptop) {
                 width: 259px;
                 height: 162px;
                 right: 99%;
@@ -494,7 +546,8 @@ body {
 }
 
 .sins__advice {
-    padding: 47px 57px 51px 57px;
+    width: 533px;
+    padding: 30px 250px 30px 20px;
     box-sizing: border-box;
     background: url('../img/advice-bg.png') no-repeat 0 50%;
     background-size: 883px auto;
@@ -502,21 +555,36 @@ body {
     line-height: 1.86;
     color: #000;
     position: relative;
-    border-radius: 45px;
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
 
     @media screen and ($tablet) {
         width: 883px;
+        border-radius: 45px;
         padding-right: 345px;
+    }
+
+    @media screen and ($laptop) {
+        flex-shrink: 0;
     }
 
     &:after {
         content: '';
         position: absolute;
-        width: 735px;
-        height: 1089px;
-        left: 485px;
-        top: -300px;
+        width: 245px;
+        height: 363px;
+        right: 0;
+        top: -38px;
         background: url('../img/sins-people.png') no-repeat;
+        background-size: contain;
+
+        @media screen and ($tablet) {
+            width: 735px;
+            height: 1089px;
+            left: 485px;
+            top: -300px;
+            right: unset;
+        }
     }
 }
 
@@ -524,6 +592,7 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     margin: 0 auto;
+    margin-bottom: 50px;
 
     @media screen and($tablet) {
         padding-left: 50px;
@@ -568,8 +637,8 @@ body {
 }
 
 .slider-item {
-    width: 598px;
-    height: 117px;
+    width: 398px;
+    height: 78px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -581,38 +650,32 @@ body {
     line-height: 1.2;
     text-transform: uppercase;
     background: url('../img/sins-blood.png') no-repeat;
+    background-size: contain;;
     margin-right: 50px;
     flex-shrink: 0;
+
+    @media screen and ($tablet) {
+        width: 598px;
+        height: 117px;
+        background-size: unset;
+    }
 }
 
 .assist {
-    padding: 260px 0 50px;
-    margin-bottom: 77px;
+    padding: 100px 0 50px;
     background: url('../img/assist-smoke.png') no-repeat 0 0, url('../img/assist-bg-1.png') no-repeat 50% bottom, url('../img/assist-bg-2.png') no-repeat 50% 46px;
     background-size: auto, auto 1152px, auto 1152px;
     position: relative;
 
     @media screen and($tablet) {
+        padding-top: 260px;
         padding-bottom: 380px;
+        margin-bottom: 77px;
     }
 
     @media screen and($desktop) {
         background: url('../img/assist-people.png') no-repeat 0 130px, url('../img/assist-smoke.png') no-repeat 0 0, url('../img/assist-bg-1.png') no-repeat 50% bottom, url('../img/assist-bg-2.png') no-repeat 50% 46px;
         background-size: auto, auto, auto 1152px, auto 1152px;
-    }
-
-    &:before {
-        content: '';
-        position: absolute;
-        width: 796px;
-        height: 1333px;
-        background: url('../img/assist-people.png') no-repeat 0 0;
-        z-index: 0;
-        right: 1000px;
-
-        @media screen and($desktop) {
-            display: none;
-        }
     }
 }
 
@@ -624,27 +687,57 @@ body {
     position: relative;
     z-index: 1;
 
-    @media screen and ($desktop) {
+    @media screen and ($tablet) {
         padding-left: 50px;
         padding-right: 50px;
+        max-width: 625px;
     }
 
     @media screen and ($desktop) {
         margin-right: 85px;
         padding: 0;
+        max-width: 926px;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 796px;
+        height: 1333px;
+        background: url('../img/assist-people.png') no-repeat 0 0;
+        z-index: 0;
+        left: -750px;
+
+        @media screen and($desktop) {
+            display: none;
+        }
     }
 }
 
 .assist__title {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+    display: inline-block;
+
+    @media screen and($tablet) {
+        margin-bottom: 100px;
+    }
 }
 
 .assist__text {
-    margin-bottom: 180px;
+    margin-bottom: 130px;
+    max-width: 515px;
+
+    @media screen and ($tablet) {
+        margin-bottom: 180px;
+    }
+
+    @media screen and ($desktop) {
+        max-width: unset;
+    }
 }
 
 .iceberg {
-    padding: 57px 0 50px 20px;
+    padding: 57px 20px 50px 20px;
     overflow: hidden;
     background: url('../img/iceberg-smoke.png') no-repeat 0 0,
     url('../img/iceberg-bg-1.png') no-repeat 50% 0,
@@ -658,20 +751,29 @@ body {
 
     @media screen and ($tablet) {
         padding-left: 50px;
+        padding-right: 50px;
     }
 
     @media screen and ($desktop) {
         padding-bottom: 211px;
         padding-left: 386px;
+        padding-right: 0;
     }
 }
 
 .iceberg__title {
     max-width: 1170px;
-    margin-bottom: 215px;
+    margin: 0 auto 50px;
+    text-align: center;
+
+    @media screen and ($tablet) {
+        margin-bottom: 215px;
+    }
 
     @media screen and ($desktop) {
+        margin: 0;
         margin-left: 36px;
+        text-align: left;
     }
 }
 
@@ -680,7 +782,11 @@ body {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-bottom: 112px;
+    margin-bottom: 36px;
+
+    @media screen and ($tablet) {
+        margin-bottom: 112px;
+    }
 
     @media screen and ($desktop) {
         flex-wrap: nowrap;
@@ -688,16 +794,20 @@ body {
 }
 
 .iceberg__label {
-    width: 422px;
+    max-width: 422px;
     height: 151px;
     padding: 32px 10px 36px 18px;
     box-sizing: border-box;
     font-size: 2.8rem;
     line-height: 1.7;
-    background: url('../img/iceberg-label-bg.png') no-repeat;
+    background: url('../img/iceberg-label-bg.png') no-repeat 0 50%;
+    background-size: 422px auto;
     color: #000;
-    flex-shrink: 0;
     border-radius: 11px;
+
+    @media screen and ($tablet) {
+        flex-shrink: 0;
+    }
 }
 
 .iceberg__notice {
@@ -706,7 +816,6 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     max-width: 940px;
-    margin-left: 20px;
     margin-top: 36px;
     padding: 12px 20px 18px 20px;
     background: rgba(0, 0, 0, 0.6);
@@ -740,10 +849,13 @@ body {
 }
 
 .iceberg__label--bottom {
-    margin-right: 400px;
     margin-left: auto;
     margin-bottom: 72px;
     position: relative;
+
+    @media screen and ($tablet) {
+        margin-right: 400px;
+    }
 
     &:before {
         content: '';
@@ -801,59 +913,83 @@ body {
     margin: 0 auto 85px;
     padding-left: 20px;
     padding-right: 20px;
+    text-align: center;
 
     @media screen and ($tablet) {
-        padding-left: 50px;
+        padding-left: 100px;
         padding-right: 50px;
+        text-align: left;
     }
 
     @media screen and ($desktop) {
+        padding-left: 50px;
         max-width: 556px;
         margin: 0 auto 85px 284px;
     }
 }
 
 .space__notice {
-    max-width: 866px;
-    padding: 39px 31px 47px 31px;
+    width: 566px;
+    padding: 30px 250px 30px 20px;
     box-sizing: border-box;
     background: url('../img/space-notice.png') no-repeat 0 50%;
     background-size: 866px auto;
     font-size: 2.8rem;
     line-height: 1.46;
     color: #000;
-    margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 153px;
-    border-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
     position: relative;
 
     @media screen and ($tablet) {
+        width: 866px;
         margin-left: auto;
-        margin-right: 0;
-        padding-right: 142px;
+        margin-right: 200px;
+        padding: 39px 142px 47px 31px;
+        border-radius: 30px;
     }
 
     @media screen and ($desktop) {
         margin-left: 439px;
+        margin-right: 0;
     }
 
     &:after {
         content: '';
         position: absolute;
-        width: 1119px;
-        height: 1056px;
-        top: -450px;
-        left: 347px;
+        width: 373px;
+        height: 352px;
+        top: -13px;
+        right: 0;
         background: url('../img/space-people.png') no-repeat;
+        background-size: contain;
+
+        @media screen and ($tablet) {
+            width: 1119px;
+            height: 1056px;
+            top: -450px;
+            left: 192px;
+            right: unset;
+        }
+
+        @media screen and ($desktop) {
+            left: 347px;
+        }
     }
 }
 
 .space__btn {
     margin-left: -87px;
-    margin-bottom: 230px;
+    margin-bottom: 50px;
 
     @media screen and ($tablet) {
+        margin-left: 176px;
+        margin-bottom: 230px;
+    }
+
+    @media screen and ($desktop) {
         margin-left: 295px;
     }
 }
@@ -862,6 +998,36 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    position: relative;
+    animation: slider-anim2 20s infinite ease;
+    left: -10px;
+
+    @media screen and ($tablet) {
+        position: static;
+        animation: unset;
+        left: 0;
+    }
+}
+
+@keyframes slider-anim2 {
+    0% {
+        left: -10px;
+    }
+    20% {
+        left: -273px;
+    }
+    40% {
+        left: -615px;
+    }
+    60% {
+        left: -863px;
+    }
+    80% {
+        left: -273px;
+    }
+    100% {
+        left: -10px;
+    }
 }
 
 .chains__item {
@@ -950,7 +1116,7 @@ body {
 
     &:nth-child(3) {
         width: 337px;
-        margin-right: 144px;
+        margin-right: -10px;
 
         @media screen and ($desktop) {
             margin-right: 295px;
@@ -995,9 +1161,17 @@ body {
     margin-bottom: 80px;
     text-align: center;
 
+    span {
+        color: inherit;
+    }
+
     @media screen and ($tablet) {
         padding-left: 50px;
         padding-right: 50px;
+
+        span {
+            color: #CE0000;
+        }
     }
 
     @media screen and ($desktop) {
@@ -1008,18 +1182,27 @@ body {
     }
 }
 
-.bonfire__title-label {
-    max-width: 813px;
-    font-size: 3.3rem;
-    line-height: 1.18;
-    position: relative;
-    margin-bottom: 50px;
-    padding-right: 20px;
-    margin-left: 120px;
+.bonfire__right-hidden {
+    display: block;
+    margin-bottom: 20px;
 
     @media screen and ($tablet) {
+        display: none;
+    }
+}
+
+.bonfire__title-label {
+    display: none;
+
+    @media screen and ($tablet) {
+        max-width: 813px;
+        font-size: 3.3rem;
+        line-height: 1.18;
+        position: relative;
+        margin-left: 120px;
         padding-right: 50px;
         margin-bottom: 10px;
+        display: block;
     }
 
     @media screen and ($desktop) {
@@ -1050,7 +1233,7 @@ body {
 
     }
 
-    @media screen and ($desktop) {
+    @media screen and (min-width: 1350px) {
         margin-left: 45px;
         flex-direction: row;
         align-items: baseline;
@@ -1060,7 +1243,7 @@ body {
 .bonfire__night {
     max-width: 866px;
     box-sizing: border-box;
-    padding: 170px 20px 16px 20px;
+    padding: 30px 20px 30px 20px;
     font-size: 2.8rem;
     line-height: 1.42;
     color: #000;
@@ -1080,6 +1263,11 @@ body {
         background-size: auto;
         padding: 126px 93px 153px 409px;
         border-radius: 0;
+        margin-right: 200px;
+    }
+
+    @media screen and (min-width: 1350px) {
+        margin-right: 0;
     }
 
     @media screen and ($desktop) {
@@ -1089,16 +1277,10 @@ body {
     }
 
     &:before {
-        content: '';
-        position: absolute;
-        width: 338px;
-        height: 267px;
-        top: -17%;
-        left: 50%;
-        background: url('../img/bonfire-night-sticker.png') no-repeat;
-        transform: scale(0.5) translateX(-96%);
-
         @media screen and ($tablet) {
+            content: '';
+            position: absolute;
+            background: url('../img/bonfire-night-sticker.png') no-repeat;
             width: 338px;
             height: 267px;
             top: 96px;
@@ -1111,6 +1293,17 @@ body {
 .bonfire__call {
     font-family: 'Resident Evil 7(RUS BY LYAJKA)', Arial, open-sans;
     text-transform: uppercase;
+    margin-left: auto;
+    margin-right: 20px;
+
+    @media screen and ($tablet) {
+        margin-left: 400px;
+        margin-right: unset;
+    }
+
+    @media screen and (min-width: 1350px) {
+        margin-left: 0;
+    }
 
     span {
         display: block;
@@ -1119,6 +1312,11 @@ body {
         &:nth-child(1) {
             font-size: 4.4rem;
             line-height: 1.18;
+            margin-bottom: 10px;
+
+            @media screen and ($tablet) {
+                margin-bottom: 0;
+            }
         }
 
         &:nth-child(2) {
@@ -1130,15 +1328,19 @@ body {
         &:nth-child(3) {
             font-size: 6.0rem;
             line-height: 1.2;
-            margin-top: -35px;
             text-align: right;
             padding-right: 10px;
+            margin-top: -10px;
+
+            @media screen and ($tablet) {
+                margin-top: -35px;
+            }
         }
     }
 }
 
 .disease {
-    padding: 308px 20px 50px 20px;
+    padding: 100px 20px 50px 20px;
     position: relative;
     overflow: hidden;
     background: url('../img/disease-bg.png') no-repeat 50% 67px;
@@ -1156,31 +1358,74 @@ body {
 
 .disease__title {
     max-width: 1130px;
-    margin-bottom: 154px;
+    text-align: center;
+    margin: 0 auto 50px;
+
+    @media screen and ($tablet) {
+        margin-bottom: 154px;
+    }
+
+    @media screen and ($desktop) {
+        text-align: left;
+        margin: 0 0 154px;
+    }
 }
 
 .disease__title-label {
     font-size: 3.3rem;
     line-height: 1.18;
     max-width: 885px;
-    margin-left: 102px;
-    margin-bottom: 107px;
+    margin-left: 150px;
+    margin-bottom: 50px;
+
+    @media screen and ($tablet) {
+        margin-bottom: 130px;
+    }
+
+    @media screen and ($desktop) {
+        margin-left: 102px;
+        margin-bottom: 107px;
+    }
+}
+
+.disease__hidden {
+    display: none;
+
+    @media screen and ($tablet) {
+        display: block;
+    }
 }
 
 .disease__hidden-text {
-    padding-left: 228px;
-    margin-left: -43px;
     position: relative;
-    margin-bottom: 132px;
+    margin-bottom: 80px;
+    width: 168px;
+    margin-left: auto;
+
+    @media screen and ($tablet) {
+        padding-left: 228px;
+        margin-left: -43px;
+        width: auto;
+        margin-bottom: 132px;
+    }
 
     &:before {
         content: '';
         position: absolute;
-        width: 463px;
-        height: 565px;
-        top: -188px;
-        left: -121px;
+        width: 231px;
+        height: 282px;
+        top: -49px;
+        right: 163px;
         background: url('../img/disease-hidden-detail.png') no-repeat;
+        background-size: contain;
+
+        @media screen and ($tablet) {
+            width: 463px;
+            height: 565px;
+            top: -188px;
+            left: -121px;
+            background-size: unset;
+        }
     }
 }
 
@@ -1189,9 +1434,8 @@ body {
     font-size: 2.8rem;
     line-height: 1.46;
     color: #000;
-    padding: 20px;
+    padding: 30px 20px;
     box-sizing: border-box;
-    margin-left: auto;
     background: url('../img/disease-content-bg.png') no-repeat 0 50%;
     background-size: 916px auto;
     border-radius: 30px;
@@ -1199,10 +1443,13 @@ body {
 
     @media screen and ($tablet) {
         padding: 50px 140px 52px 40px;
+        margin-right: 200px;
+        margin-left: auto;
     }
 
     @media screen and ($desktop) {
         margin-left: 334px;
+        margin-right: 0;
     }
 
     &:after {
@@ -1239,7 +1486,11 @@ body {
 
 .modules__title {
     text-align: center;
-    margin-bottom: 130px;
+    margin-bottom: 50px;
+
+    @media screen and ($tablet) {
+        margin-bottom: 130px;
+    }
 }
 
 .modules__columns {
@@ -1250,15 +1501,16 @@ body {
     justify-content: flex-start;
     align-items: center;
 
-    @media screen and ($tablet) {
-        margin-left: 50px;
-        margin-right: 50px;
+    @media screen and ($laptop) {
+        margin-left: 20px;
+        margin-right: 20px;
+        flex-direction: row;
+        align-items: flex-start;
     }
 
     @media screen and ($desktop) {
-        flex-direction: row;
         margin-left: 140px;
-        align-items: flex-start;
+        margin-right: 50px;
     }
 }
 
@@ -1270,10 +1522,26 @@ body {
     flex-wrap: wrap;
     margin-bottom: 20px;
 
-    @media screen and ($desktop) {
+    @media screen and ($laptop) {
         max-width: 696px;
-        margin-right: 93px;
+        margin-right: 30px;
         align-items: flex-start;
+        flex-shrink: 2;
+    }
+
+    @media screen and ($desktop) {
+        margin-right: 93px;
+        flex-shrink: unset;
+    }
+}
+
+.module__content {
+    @media screen and ($laptop) {
+        flex-shrink: 1;
+    }
+
+    @media screen and ($desktop) {
+        flex-shrink: unset;
     }
 }
 
@@ -1365,13 +1633,16 @@ body {
         max-width: 645px;
 
         &:after {
-            content: '';
             position: absolute;
             width: 226px;
             height: 305px;
             bottom: -310px;
             right: 0;
             background: url('../img/modules-text-detail-1.png') no-repeat;
+
+            @media screen and ($tablet) {
+                content: '';
+            }
 
             @media screen and ($desktop) {
                 top: 345px;
@@ -1384,13 +1655,16 @@ body {
         max-width: 708px;
 
         &:after {
-            content: '';
             position: absolute;
             width: 271px;
             height: 296px;
             bottom: -310px;
             right: 0;
             background: url('../img/modules-text-detail-2.png') no-repeat;
+
+            @media screen and ($tablet) {
+                content: '';
+            }
 
             @media screen and ($desktop) {
                 top: 360px;
@@ -1403,13 +1677,16 @@ body {
         max-width: 830px;
 
         &:after {
-            content: '';
             position: absolute;
             width: 280px;
             height: 290px;
             bottom: -310px;
             right: 0;
             background: url('../img/modules-text-detail-3.png') no-repeat;
+
+            @media screen and ($tablet) {
+                content: '';
+            }
 
             @media screen and ($desktop) {
                 top: 366px;
@@ -1422,13 +1699,16 @@ body {
         max-width: 785px;
 
         &:after {
-            content: '';
             position: absolute;
             width: 294px;
             height: 306px;
             bottom: -310px;
             right: 0;
             background: url('../img/modules-text-detail-4.png') no-repeat;
+
+            @media screen and ($tablet) {
+                content: '';
+            }
 
             @media screen and ($desktop) {
                 top: 413px;
@@ -1441,13 +1721,16 @@ body {
         max-width: 772px;
 
         &:after {
-            content: '';
             position: absolute;
             width: 269px;
             height: 245px;
             bottom: -250px;
             right: 0;
             background: url('../img/modules-text-detail-5.png') no-repeat;
+
+            @media screen and ($tablet) {
+                content: '';
+            }
 
             @media screen and ($desktop) {
                 top: 399px;
@@ -1460,13 +1743,16 @@ body {
         max-width: 835px;
 
         &:after {
-            content: '';
             position: absolute;
             width: 245px;
             height: 344px;
             bottom: -355px;
             right: 0;
             background: url('../img/modules-text-detail-6.png') no-repeat;
+
+            @media screen and ($tablet) {
+                content: '';
+            }
 
             @media screen and ($desktop) {
                 top: 399px;
@@ -1479,13 +1765,16 @@ body {
         max-width: 784px;
 
         &:after {
-            content: '';
             position: absolute;
             width: 178px;
             height: 209px;
             bottom: -250px;
             right: 0;
             background: url('../img/modules-text-detail-7.png') no-repeat;
+
+            @media screen and ($tablet) {
+                content: '';
+            }
 
             @media screen and ($desktop) {
                 top: 399px;
@@ -1522,25 +1811,30 @@ body {
     position: relative;
 
     &:before {
-        content: '';
         position: absolute;
         width: 527px;
         height: 1369px;
         top: -145px;
         right: 0;
         background: url('../img/fetter-detail.png') no-repeat;
+
+        @media screen and ($tablet) {
+            content: '';
+        }
     }
 }
 
 .fetter__inner {
-    padding-left: 85px;
-    padding-bottom: 290px;
-    padding-top: 448px;
+    padding-left: 55px;
+    padding-bottom: 50px;
+    padding-top: 150px;
     position: relative;
     z-index: 2;
 
     @media screen and ($tablet) {
         padding-left: 115px;
+        padding-top: 448px;
+        padding-bottom: 290px;
     }
 
     @media screen and ($desktop) {
@@ -1549,11 +1843,20 @@ body {
 }
 
 .fetter__title {
-    margin-bottom: 140px;
+    margin-bottom: 50px;
     padding-right: 20px;
+
+    span {
+        color: inherit;
+    }
 
     @media screen and ($tablet) {
         padding-right: 50px;
+        margin-bottom: 140px;
+
+        span {
+            color: #CE0000;
+        }
     }
 
     @media screen and ($desktop) {
@@ -1569,31 +1872,56 @@ body {
     margin-bottom: 35px;
 }
 
+.fetter__button {
+    @media screen and ($tablet) {
+        margin-left: 60px;
+    }
+
+    @media screen and ($desktop) {
+        margin-left: 0;
+    }
+}
+
 .fetter__column {
     font-size: 3.3rem;
     line-height: 1.36;
     max-width: 766px;
-    margin-bottom: 223px;
     position: relative;
     padding-right: 20px;
+    padding-bottom: 500px;
 
     @media screen and ($tablet) {
         padding-right: 50px;
+        margin-bottom: 150px;
+        padding-bottom: 0;
     }
 
     @media screen and ($desktop) {
         padding-right: 0;
+        margin-bottom: 223px;
     }
 
     &:after {
         content: '';
         position: absolute;
-        width: 922px;
-        height: 1227px;
-        top: -126px;
-        left: 678px;
+        width: 307px;
+        height: 409px;
+        bottom: 70px;
+        left: 50%;
+        transform: translateX(-50%);
         background: url('../img/fetter-people.png') no-repeat;
         z-index: 0;
+        background-size: contain;
+
+        @media screen and ($tablet) {
+            width: 922px;
+            height: 1227px;
+            top: -126px;
+            bottom: unset;
+            transform: none;
+            left: 678px;
+            background-size: unset;
+        }
     }
 }
 
@@ -1605,15 +1933,19 @@ body {
     &:before {
         content: '';
         position: absolute;
-        width: 48px;
-        height: 48px;
+        width: 24px;
+        height: 24px;
         top: 0;
-        left: -20px;
+        left: -15px;
         transform: translateX(-100%);
         background: url('../img/bonfire-title-label-detail.png') no-repeat;
+        background-size: contain;
 
         @media screen and ($tablet) {
             left: -35px;
+            width: 48px;
+            height: 48px;
+            background-size: unset;
         }
     }
 }
@@ -1625,13 +1957,16 @@ body {
     z-index: 1;
 
     &:before {
-        content: '';
         position: absolute;
         width: 514px;
         height: 1369px;
         top: -828px;
         left: 0;
         background: url('../img/compare-detail-1.png') no-repeat;
+
+        @media screen and ($tablet) {
+            content: '';
+        }
     }
 }
 
@@ -1642,7 +1977,7 @@ body {
     position: relative;
 
     @media screen and ($tablet) {
-        padding-left: 50px;
+        padding-left: 75px;
         padding-right: 50px;
     }
 
@@ -1655,19 +1990,44 @@ body {
 .compare__title {
     text-align: center;
     line-height: 1;
+    margin-bottom: 30px;
+
+    @media screen and ($tablet) {
+        margin-bottom: 0;
+    }
 }
 
 .compare__subtitle {
     display: block;
     text-align: center;
-    margin-bottom: 135px;
+    margin-bottom: 50px;
     margin-top: -10px;
+
+    @media screen and ($tablet) {
+        margin-bottom: 135px;
+    }
 }
 
 .compare__columns {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    &.tablet {
+        display: none;
+
+        @media screen and ($tablet) {
+            display: flex;
+        }
+    }
+
+    &.mobile {
+        display: flex;
+
+        @media screen and ($tablet) {
+            display: none;
+        }
+    }
 }
 
 .compare__list {
@@ -1678,34 +2038,74 @@ body {
     flex-wrap: wrap;
     font-size: 3.2rem;
     line-height: 1;
+
+    &.mobile {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
+
+.compare__column-title {
+    margin-bottom: 20px;
+
+    @media screen and ($tablet) {
+        margin-bottom: 0;
+    }
 }
 
 .compare__item {
-    width: 45%;
-    margin-bottom: 32px;
+    width: 100%;
+    margin-bottom: 50px;
     position: relative;
 
-    &:nth-child(odd) {
-        max-width: 603px;
-        margin-right: 20px;
+    @media screen and ($tablet) {
+        width: 45%;
+        margin-bottom: 32px;
+    }
 
-        &:nth-child(2n + 5):before {
+    &:nth-child(odd) {
+
+        @media screen and ($tablet) {
+            max-width: 603px;
+        }
+
+        &:nth-child(2n + 3):before {
             content: '';
             position: absolute;
-            left: 0;
+            left: -50px;
             top: -16px;
-            width: 1603px;
+            width: calc(100% + 100px);
             height: 2px;
             background: #2f2f2f;
+
+            @media screen and ($tablet) {
+                display: none;
+            }
         }
 
         @media screen and ($tablet) {
             margin-right: 50px;
+
+            &:nth-child(2n + 5):before {
+                content: '';
+                position: absolute;
+                display: block;
+                left: 0;
+                top: -16px;
+                width: 1603px;
+                height: 2px;
+                background: #2f2f2f;
+            }
         }
     }
 
     &:nth-child(even) {
-        max-width: 680px;
+        @media screen and ($tablet) {
+            max-width: 680px;
+        }
     }
 
     &:last-child {
@@ -1714,7 +2114,7 @@ body {
 }
 
 .free {
-    padding: 754px 20px 355px;
+    padding: 840px 20px 100px;
     margin-top: -754px;
     background: url('../img/fire-bg.png') no-repeat 50% bottom;
     background-size: auto 3144px;
@@ -1731,11 +2131,15 @@ body {
     &:after {
         content: '';
         position: absolute;
-        top: 524px;
+        top: 454px;
         right: 46px;
         width: 508px;
         height: 331px;
         background: url('../img/free-detail.png') no-repeat;
+
+        @media screen and ($desktop) {
+            top: 524px;
+        }
     }
 }
 
@@ -1744,24 +2148,83 @@ body {
     margin-bottom: 64px;
 }
 
+.free__btn {
+    width: 147px;
+    height: 55px;
+    font-size: 28px;
+    line-height: 1.06;
+    transform: none;
+    margin: 0 auto;
+
+    .btn__inner {
+        background-size: contain;
+
+        @media screen and ($tablet) {
+            background-size: unset;
+        }
+    }
+
+    @media screen and ($tablet) {
+        width: 363px;
+        height: 115px;
+        font-size: 74px;
+        line-height: 1.06;
+        transform: scale(0.75);
+        margin: 0;
+    }
+}
 .free__columns {
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
+
+    &.mobile {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0 auto;
+
+        @media screen and (min-width: 480px) {
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        @media screen and ($tablet) {
+            display: none;
+        }
+    }
+
+    &.tablet {
+        display: none;
+
+        @media screen and ($tablet) {
+            display: flex;
+        }
+    }
 }
 
 .free__list {
     max-width: 621px;
     line-height: 1.4;
     color: rgba(255, 255, 255, 0.88);
-    padding-top: 220px;
-    padding-bottom: 170px;
-    margin-right: 57px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @media screen and ($tablet) {
+        margin-right: 57px;
+        padding-top: 220px;
+        padding-bottom: 170px;
+    }
 }
 
 .free__list-item {
     margin-bottom: 45px;
     position: relative;
+    text-align: center;
+
+    @media screen and ($tablet) {
+        text-align: left;
+    }
 
     &.ok-first {
         &:before {
@@ -1818,11 +2281,16 @@ body {
     &:not(:last-child) .free__item-text:after {
         content: '';
         position: absolute;
-        width: 1537px;
+        width: calc(100% + 180px);
         height: 1px;
-        left: 0;
+        left: -90px;
         bottom: -20px;
         background: rgba(255, 255, 255, 0.5);
+
+        @media screen and ($tablet) {
+            width: 1537px;
+            left: 0;
+        }
     }
 }
 
@@ -1838,9 +2306,7 @@ body {
 
 .free__column {
     border-radius: 20px;
-    padding-top: 33px;
-    padding-bottom: 23px;
-    max-width: 412px;
+    padding: 33px 20px 23px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1848,16 +2314,23 @@ body {
     flex-grow: 1;
 
     @media screen and ($tablet) {
-
+        width: 412px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        padding: 33px 0 23px;
     }
 
     @media screen and ($desktop) {
-        width: 412px;
     }
 
     &--red {
+        margin-bottom: 50px;
         background: #C02B2B;
-        margin-right: 30px;
+
+        @media screen and ($tablet) {
+            margin-right: 30px;
+            margin-bottom: 0;
+        }
 
         .free__column-label {
             max-width: 304px;
@@ -1900,14 +2373,17 @@ body {
 }
 
 .witcher {
-    padding: 157px 20px 160px;
+    padding: 80px 20px 160px;
     margin-top: -117px;
-    background: url('../img/witcher-bg.png') no-repeat 50% 0;
+    background: url('../img/witcher-bg.png') no-repeat right 0;
     background-size: auto 1572px;
 
     @media screen and ($tablet) {
-        padding-left: 50px;
-        padding-right: 50px;
+        padding: 157px 50px 160px;
+
+        > .witcher__module-text {
+            display: none;
+        }
     }
 
     @media screen and ($desktop) {
@@ -1919,6 +2395,23 @@ body {
 .witcher__title {
     text-align: center;
     margin-bottom: 130px;
+
+    &.tablet {
+        display: none;
+
+        @media screen and ($tablet) {
+            display: block;
+            margin-bottom: 130px;
+        }
+    }
+
+    &.mobile {
+        margin-bottom: 30px;
+
+        @media screen and ($tablet) {
+            display: none;
+        }
+    }
 }
 
 .witcher__module {
@@ -1932,10 +2425,12 @@ body {
     margin-bottom: 100px;
     position: relative;
     border-radius: 30px;
+    display: none;
 
     @media screen and ($tablet) {
         padding: 50px;
         margin-bottom: 160px;
+        display: block;
     }
 
     @media screen and ($desktop) {
@@ -1976,6 +2471,11 @@ body {
 .witcher__module-text {
     font-size: 2.8rem;
     line-height: 1.42;
+    text-align: center;
+
+    @media screen and ($tablet) {
+        text-align: left;
+    }
 }
 
 .witcher__about {
@@ -1984,10 +2484,12 @@ body {
     max-width: 450px;
     position: relative;
     margin-bottom: 175px;
+    display: none;
 
     @media screen and ($tablet) {
         padding-left: 310px;
         margin-bottom: 122px;
+        display: block;
     }
 
     @media screen and ($desktop) {
@@ -2028,9 +2530,10 @@ body {
     flex-wrap: wrap;
     align-items: flex-start;
     margin-left: 0;
+    margin-top: 80px;
 
     @media screen and ($tablet) {
-
+        margin-top: 0;
     }
 
     @media screen and ($desktop) {
@@ -2041,10 +2544,24 @@ body {
 
 .witcher__bonus-take {
     width: 428px;
+
+    @media screen and ($tablet) {
+        margin-top: 20px;
+    }
+
+    @media screen and ($desktop) {
+        margin-top: 0;
+    }
 }
 
 .witcher__btn {
-    margin-bottom: 8px;
+    margin-bottom: -25px;
+    margin-left: -107px;
+
+    @media screen and ($tablet) {
+        margin-bottom: 8px;
+        margin-left: -53px;
+    }
 
     &:before {
         display: none;
@@ -2077,13 +2594,14 @@ body {
     font-size: 2.8rem;
     line-height: 1.42;
     margin-top: 50px;
+    display: none;
 
     @media screen and ($tablet) {
-
+        margin-top: 0;
+        display: block;
     }
 
     @media screen and ($desktop) {
-        margin-top: 0;
     }
 }
 
@@ -2096,6 +2614,7 @@ body {
     @media screen and ($tablet) {
         padding-left: 50px;
         padding-right: 50px;
+        padding-top: 180px;
     }
 
     @media screen and ($desktop) {
@@ -2125,10 +2644,14 @@ body {
 
     }
 
-    @media screen and ($desktop) {
+    @media screen and ($laptop) {
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
+    }
+
+    @media screen and ($desktop) {
+
     }
 }
 
@@ -2168,8 +2691,11 @@ body {
 
     }
 
-    @media screen and ($desktop) {
+    @media screen and ($laptop) {
         margin-bottom: 0;
+    }
+
+    @media screen and ($desktop) {
     }
 }
 
