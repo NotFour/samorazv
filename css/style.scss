@@ -2380,10 +2380,6 @@ body {
 
     @media screen and ($tablet) {
         padding: 157px 50px 160px;
-
-        > .witcher__module-text {
-            display: none;
-        }
     }
 
     @media screen and ($desktop) {
@@ -2472,6 +2468,26 @@ body {
     font-size: 2.8rem;
     line-height: 1.42;
     text-align: center;
+
+    &.mobile {
+        position: relative;
+        padding-bottom: 605px;
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 673px;
+            height: 600px;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            background: url('../img/mobile-witcher.png') no-repeat;
+        }
+
+        @media screen and ($tablet) {
+            display: none;
+        }
+    }
 
     @media screen and ($tablet) {
         text-align: left;
