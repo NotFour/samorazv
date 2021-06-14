@@ -782,8 +782,7 @@ body {
 }
 @media screen and (min-width: 1920px) {
   .iceberg__title {
-    margin: 0;
-    margin-left: 36px;
+    margin: 0 auto 215px 36px;
     text-align: left;
   }
 }
