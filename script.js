@@ -32,15 +32,6 @@ function countDown() {
     }
 }
 
-var buyButtons = document.querySelectorAll('.free__btn');
-buyButtons.forEach((item) => {
-    item.addEventListener('click', function(e) {
-        e.preventDefault();
-        var price = e.target.parentElement.parentElement.querySelector('span').textContent.match(/\d+\s+\S+/);
-        alert('Вы купили курс за ' + price);
-    })
-})
-
 countDown();
 
 var moduleButtons = document.querySelectorAll('.module__btn:not(.too)');
