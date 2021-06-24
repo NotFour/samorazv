@@ -3,7 +3,7 @@ function getBonusClick(e) {
     alert('Забрали бонус');
 }
 
-var getBonus = document.querySelector('.witcher__btn');
+/*var getBonus = document.querySelector('.witcher__btn');
 getBonus.addEventListener('click', getBonusClick);
 
 var timer = 721;
@@ -32,7 +32,7 @@ function countDown() {
     }
 }
 
-countDown();
+countDown();*/
 
 var moduleButtons = document.querySelectorAll('.module__btn:not(.too)');
 

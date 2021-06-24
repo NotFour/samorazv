@@ -2621,7 +2621,6 @@ body {
 }
 
 .bridges {
-    margin-top: -160px;
     padding: 50px 20px 71px 20px;
     background: url('../img/bridges-bg.png') no-repeat 50% 0;
     background-size: auto 1215px;
@@ -2630,6 +2629,7 @@ body {
         padding-left: 50px;
         padding-right: 50px;
         padding-top: 180px;
+        margin-top: -160px;
     }
 
     @media screen and ($desktop) {
