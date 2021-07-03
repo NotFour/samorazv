@@ -2722,10 +2722,187 @@ body {
     margin-bottom: 0;
   }
 }
+
 .bridges__content {
   border-radius: 35px;
   width: 100%;
   max-width: 600px;
+}
+
+.tinkoff {
+  background: #000 url("../img/tinkoff-bg-tablet.png") no-repeat -180px 0;
+  padding: 25px 20px 225px;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .tinkoff {
+    padding: 25px 45px 115px;
+  }
+}
+@media screen and (min-width: 850px) {
+  .tinkoff {
+    background: #000 url("../img/tinkoff-bg-tablet.png") no-repeat 0 0;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .tinkoff {
+    background: #000 url("../img/tinkoff-bg-desktop.png") no-repeat 0 0;
+    background-size: 100% auto;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .tinkoff {
+    padding-bottom: 205px;
+  }
+}
+.tinkoff:before {
+  content: "";
+  position: absolute;
+  width: 370px;
+  height: 242px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("../img/tinkoff-fire-mobile.png") no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .tinkoff:before {
+    width: 753px;
+    height: 505px;
+    bottom: 0;
+    left: auto;
+    right: 0;
+    transform: none;
+    background: url("../img/tinkoff-fire-tablet.png") no-repeat;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .tinkoff:before {
+    width: 1333px;
+    height: 884px;
+    background: url("../img/tinkoff-fire-desktop.png") no-repeat;
+  }
+}
+.tinkoff:after {
+  content: "";
+  position: absolute;
+  width: 305px;
+  height: 232px;
+  bottom: 0;
+  left: 54%;
+  transform: translateX(-50%);
+  background: url("../img/tinkoff-doctor-mobile.png") no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .tinkoff:after {
+    width: 448px;
+    height: 471px;
+    bottom: 0;
+    left: auto;
+    right: 8px;
+    transform: none;
+    background: url("../img/tinkoff-doctor-tablet.png") no-repeat;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .tinkoff:after {
+    width: 732px;
+    height: 798px;
+    background: url("../img/tinkoff-doctor-desktop.png") no-repeat;
+  }
+}
+
+.tinkoff__title {
+  text-align: center;
+  font-size: 41px;
+  line-height: 1;
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 768px) {
+  .tinkoff__title {
+    font-size: 58px;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .tinkoff__title {
+    font-size: 101px;
+  }
+}
+
+.tinkoff__subtitle {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  line-height: 27px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .tinkoff__subtitle {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 100px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .tinkoff__subtitle {
+    font-size: 32px;
+    line-height: 45px;
+    margin-bottom: 170px;
+  }
+}
+.tinkoff__subtitle span {
+  color: #e5102e;
+}
+
+.tinkoff__content {
+  display: flex;
+  justify-content: center;
+  margin: 0 35px;
+}
+@media screen and (min-width: 768px) {
+  .tinkoff__content {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    margin-right: 375px;
+  }
+}
+
+.tinkoff__label {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .tinkoff__label {
+    display: block;
+    text-transform: uppercase;
+    font-family: "Resident Evil 7(RUS BY LYAJKA)", Arial, open-sans;
+    font-size: 23px;
+    line-height: 1;
+    margin: 0 auto 5px;
+    letter-spacing: 1.5px;
+  }
+  .tinkoff__label span {
+    color: #ff0b28;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .tinkoff__label {
+    font-size: 41px;
+  }
+}
+
+.tinkoff__video {
+  border-radius: 35px;
+  width: 100%;
+  max-width: 350px;
+}
+@media screen and (min-width: 768px) {
+  .tinkoff__video {
+    max-width: 610px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
