@@ -2857,35 +2857,36 @@ body {
 
 .tinkoff__content {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   margin: 0 35px;
 }
 @media screen and (min-width: 768px) {
   .tinkoff__content {
     display: inline-flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
     margin: 0;
     margin-right: 375px;
   }
 }
 
 .tinkoff__label {
-  display: none;
+  display: block;
+  text-transform: uppercase;
+  font-family: "Resident Evil 7(RUS BY LYAJKA)", Arial, open-sans;
+  font-size: 16px;
+  line-height: 1;
+  margin: 0 auto 5px;
+  letter-spacing: 1.5px;
+  order: 2;
+}
+.tinkoff__label span {
+  color: #ff0b28;
 }
 @media screen and (min-width: 768px) {
   .tinkoff__label {
-    display: block;
-    text-transform: uppercase;
-    font-family: "Resident Evil 7(RUS BY LYAJKA)", Arial, open-sans;
     font-size: 23px;
-    line-height: 1;
-    margin: 0 auto 5px;
-    letter-spacing: 1.5px;
-  }
-  .tinkoff__label span {
-    color: #ff0b28;
+    order: unset;
   }
 }
 @media screen and (min-width: 1920px) {
@@ -2898,10 +2899,14 @@ body {
   border-radius: 35px;
   width: 100%;
   max-width: 350px;
+  margin-bottom: 10px;
+  order: 1;
 }
 @media screen and (min-width: 768px) {
   .tinkoff__video {
     max-width: 610px;
+    order: unset;
+    margin-bottom: 0px;
   }
 }
 
